@@ -2,27 +2,22 @@ package tests;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Wait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import pages.SeleniumEasyInputPage;
+import pages.SimpleFormDemoPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 import utilities.TestBase;
 
-public class SeleniumEasyInput extends TestBase {
-    SeleniumEasyInputPage page = new SeleniumEasyInputPage();
+public class SimpleFormDemo extends TestBase {
+
+    SimpleFormDemoPage page = new SimpleFormDemoPage();
     Actions actions = new Actions(Driver.getDriver());
-    @BeforeMethod
-    public void setUp(){
-        Driver.getDriver().get(ConfigReader.getProperty("seleniumEasy"));
-    }
+
     @Test
     public void tc001(){
-        waitForVisibility(page.alertClose,10);
-        page.alertClose.click();
         page.inputFormsPage.click();
         waitFor(1);
         page.simpleFormDemo.click();

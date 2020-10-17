@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.BeforeTest;
 
 import java.io.File;
 import java.io.IOException;
@@ -18,6 +19,14 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 
 public class TestBase  {
+
+    @BeforeTest
+    public void setup(){
+        Driver.getDriver().get(ConfigReader.getProperty("seleniumEasy"));
+        WebElement alertClose = Driver.getDriver().findElement(By.id("at-cv-lightbox-close"));
+        waitForVisibility(alertClose,10);
+        alertClose.click();
+    }
     public static String getScreenshot(String name) throws IOException {
         String date = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
         TakesScreenshot ts = (TakesScreenshot) Driver.getDriver();

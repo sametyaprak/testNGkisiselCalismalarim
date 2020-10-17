@@ -7,12 +7,10 @@ import utilities.Driver;
 
 import java.util.List;
 
-public class SeleniumEasyInputPage {
-    public SeleniumEasyInputPage(){
+public class SimpleFormDemoPage {
+    public SimpleFormDemoPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
-    @FindBy(id = "at-cv-lightbox-close")
-    public WebElement alertClose;
     @FindBy(xpath = "//*[.='Input Forms']")
     public WebElement inputFormsPage;
     @FindBy(linkText = "Simple Form Demo")

@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Properties;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 
@@ -116,5 +117,17 @@ public class ReusableMethods {
             }
         });
         return element;
+    }
+    public static String randomStringData(int a){
+        String myData ="";
+        for (int i=0;i<a;i++) {
+            char ascii = (char) ThreadLocalRandom.current().nextInt(97, 122 );
+            myData =myData + ascii;
+        }
+        return myData;
+    }
+    public static long randomLongData (int a, int b){
+        long randomNum = a + (long)(Math.random() * b);
+        return randomNum;
     }
 }

@@ -11,7 +11,7 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 import utilities.TestBase;
 
-public class SimpleFormDemo extends TestBase {
+public class SimpleFormDemoTest extends TestBase {
 
     SimpleFormDemoPage page = new SimpleFormDemoPage();
     Actions actions = new Actions(Driver.getDriver());

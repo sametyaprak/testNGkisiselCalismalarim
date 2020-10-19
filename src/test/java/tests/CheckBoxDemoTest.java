@@ -10,7 +10,7 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 import utilities.TestBase;
 
-public class CheckBoxDemo extends TestBase {
+public class CheckBoxDemoTest extends TestBase {
     CheckBoxDemoPage page = new CheckBoxDemoPage();
     @BeforeMethod
     public void setUp(){

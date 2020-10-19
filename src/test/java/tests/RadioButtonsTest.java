@@ -7,7 +7,7 @@ import utilities.TestBase;
 import java.util.HashSet;
 import java.util.Set;
 
-public class RadioButtons extends TestBase {
+public class RadioButtonsTest extends TestBase {
     RadioButtonsDemoPage page = new RadioButtonsDemoPage();
     @Test
     public void test(){
